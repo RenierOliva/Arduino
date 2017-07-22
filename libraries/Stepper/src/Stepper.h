@@ -96,6 +96,9 @@ class Stepper {
     // mover method:
     void step(int number_of_steps);
 
+    // set pins to LOW
+    void release();
+
     int version(void);
 
   private:
