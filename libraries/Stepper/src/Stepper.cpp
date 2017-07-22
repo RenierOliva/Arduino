@@ -357,6 +357,25 @@ void Stepper::stepMotor(int thisStep)
 }
 
 /*
+ * set pins to LOW.
+ */
+void Stepper::release()
+{
+  digitalWrite(motor_pin_1, LOW);
+  digitalWrite(motor_pin_2, LOW);
+  
+  if (this->pin_count >= 4) {
+        digitalWrite(motor_pin_3, LOW);
+        digitalWrite(motor_pin_4, LOW);
+  }
+
+  if (this->pin_count = 5) {
+        digitalWrite(motor_pin_5, LOW);
+  }
+  
+}
+
+/*
   version() returns the version of the library:
 */
 int Stepper::version(void)
